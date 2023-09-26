@@ -11,12 +11,15 @@ import { ListOffersComponent } from './components/list-offers/list-offers.compon
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { SharedModule } from 'src/public/shared/shared.module';
+import { HomeComponent } from './components/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ToolbarComponent,
+    HomeComponent
     ListOffersComponent
-    ToolbarComponent
   ],
   imports: [
     BrowserModule,
