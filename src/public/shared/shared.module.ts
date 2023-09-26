@@ -15,8 +15,8 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
     declarations: [],
     imports: [
-        CommonModule,
         MatCardModule, 
+        CommonModule, 
         BrowserModule,
         BrowserAnimationsModule,
         MatButtonModule,
@@ -29,7 +29,6 @@ import { FormsModule } from '@angular/forms';
     ],
     exports: [
         CommonModule,
-        MatCardModule, 
         BrowserModule,
         BrowserAnimationsModule,
         MatButtonModule,
@@ -39,6 +38,7 @@ import { FormsModule } from '@angular/forms';
         MatPaginatorModule,
         MatTableModule,
         FormsModule
+        MatCardModule
     ]
     })
     export class SharedModule { }
