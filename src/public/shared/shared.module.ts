@@ -37,7 +37,7 @@ import { FormsModule } from '@angular/forms';
         MatInputModule,
         MatPaginatorModule,
         MatTableModule,
-        FormsModule
+        FormsModule,
         MatCardModule
     ]
     })

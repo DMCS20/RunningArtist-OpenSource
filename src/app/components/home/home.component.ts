@@ -17,7 +17,7 @@ export class HomeComponent {
 
   getOfferCount() {
     this.offerService.getOffers().subscribe((data: any) => {
-        this.offerCount = data.offers.length;
+        this.offerCount = data.length;
     });
   }
 }
