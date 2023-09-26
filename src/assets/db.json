@@ -1,0 +1,95 @@
+{
+    "offers": [
+      {
+        "id": 1,
+        "title": "Descuento en equipo deportivo",
+        "description": "Obtén un 20% de descuento en tu compra de equipo deportivo en nuestra tienda asociada.",
+        "points": 30,
+        "businessId": 1
+      },
+      {
+        "id": 2,
+        "title": "Clases de yoga gratis",
+        "description": "Regístrate para obtener 5 clases de yoga gratuitas en nuestro estudio de yoga asociado.",
+        "points": 50,
+        "businessId": 2
+      },
+      {
+        "id": 3,
+        "title": "Bebida energética gratis",
+        "description": "Compra una bebida energética y obtén la segunda gratis en nuestra tienda de alimentos saludables asociada.",
+        "points": 25,
+        "businessId": 3
+      },
+      {
+        "id": 4,
+        "title": "Ruta de running especial",
+        "description": "Corre una ruta especial y obtén 100 puntos extra en tu cuenta Running Artist.",
+        "points": 100,
+        "businessId": 1
+      },
+      {
+        "id": 5,
+        "title": "Entrenamiento personalizado",
+        "description": "Obtén una sesión de entrenamiento personalizado gratuita con nuestro entrenador asociado.",
+        "points": 75,
+        "businessId": 2
+      },
+      {
+        "id": 6,
+        "title": "Descuento en ropa deportiva",
+        "description": "Compra ropa deportiva con un 15% de descuento en nuestra tienda asociada.",
+        "points": 40,
+        "businessId": 3
+      },
+      {
+        "id": 7,
+        "title": "Ruta de running escénica",
+        "description": "Corre por una ruta escénica y obtén 50 puntos extra en tu cuenta Running Artist.",
+        "points": 50,
+        "businessId": 1
+      },
+      {
+        "id": 8,
+        "title": "Clase de spinning gratis",
+        "description": "Regístrate para obtener una clase de spinning gratuita en nuestro gimnasio asociado.",
+        "points": 60,
+        "businessId": 2
+      },
+      {
+        "id": 9,
+        "title": "Descuento en suplementos",
+        "description": "Obtén un 25% de descuento en suplementos alimenticios en nuestra tienda de salud asociada.",
+        "points": 35,
+        "businessId": 3
+      },
+      {
+        "id": 10,
+        "title": "Ruta de running nocturna",
+        "description": "Realiza una ruta de running nocturna y gana 75 puntos extra en tu cuenta Running Artist.",
+        "points": 75,
+        "businessId": 1
+      }
+    ],
+    "businesses": [
+      {
+        "id": 1,
+        "name": "Tienda Deportiva Runners",
+        "location": "123 Calle Principal",
+        "phone": "555-123-4567"
+      },
+      {
+        "id": 2,
+        "name": "Estudio de Yoga Zen",
+        "location": "456 Calle Secundaria",
+        "phone": "555-987-6543"
+      },
+      {
+        "id": 3,
+        "name": "Tienda de Alimentos Saludables",
+        "location": "789 Calle Terciaria",
+        "phone": "555-567-8901"
+      }
+    ]
+  }
+  

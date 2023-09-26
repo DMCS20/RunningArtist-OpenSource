@@ -1,0 +1,18 @@
+.offer-count-card{
+    align-items: center;
+    font-size: xx-large;
+    border: 3px solid rgb(255, 175, 2);
+    border-radius: 20px;
+    margin: 30px auto;
+    width: 60%;
+}
+
+span{
+    color: red;
+}
+
+@media only screen and (max-width: 600px) {
+    .offer-count-card{
+        font-size: x-large;
+    }
+}
