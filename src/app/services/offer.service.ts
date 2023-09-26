@@ -7,31 +7,31 @@ import { Offer } from '../models/offer';
 @Injectable({
   providedIn: 'root'
 })
-export class PeliculasService {
+export class OfferService {
 
   constructor(private http: HttpClient) { }
 
-  getPeliculas(): Observable<Offer> {
+  getOffers(): Observable<Offer> {
     return this.http
       .get<Offer>(environment.baseUrl + '/offers')
   }
 
-  getPeliculaById(id: number): Observable<Offer> {
+  getOfferById(id: number): Observable<Offer> {
     return this.http
       .get<Offer>(environment.baseUrl + '/offers/' + id)
   }
 
-  addPelicula(pelicula: Offer): Observable<Offer> {
+  addOffer(offer: Offer): Observable<Offer> {
     return this.http
-      .post<Offer>(environment.baseUrl + '/offers', pelicula)
+      .post<Offer>(environment.baseUrl + '/offers', offer)
   }
 
-  updatePelicula(pelicula: Offer): Observable<Offer> {
+  updateOffer(offer: Offer): Observable<Offer> {
     return this.http
-      .put<Offer>(environment.baseUrl + '/offers/' + pelicula.id, pelicula)
+      .put<Offer>(environment.baseUrl + '/offers/' + offer.id, offer)
   }
 
-  deletePelicula(id: number): Observable<Offer> {
+  deleteOffer(id: number): Observable<Offer> {
     return this.http
       .delete<Offer>(environment.baseUrl + '/offers/' + id)
   }

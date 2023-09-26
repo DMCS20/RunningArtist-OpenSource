@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import {MatSort} from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
+import { Offer } from 'src/app/models/offer';
+import { OfferService } from 'src/app/services/offer.service';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-list-offers',
@@ -6,5 +12,82 @@ import { Component } from '@angular/core';
   styleUrls: ['./list-offers.component.scss']
 })
 export class ListOffersComponent {
+  displayedColumns: string[] = ['id', 'title', 'description', 'points', 'businessId', 'modify'];
+  dataSource = new MatTableDataSource<any>();
 
+  @ViewChild (MatPaginator, {static: true})
+  paginator !: MatPaginator;
+
+  @ViewChild(MatSort)
+  sort!: MatSort;
+
+  offer:Offer={
+    id:0,
+    title:'',
+    description:'',
+    points:0,
+    businessId:0
+  };
+
+  constructor(private offerService:OfferService, private router:Router) {}
+
+  ngOnInit():void{
+    this.getOffers();
+    this.dataSource.paginator=this.paginator;
+    this.dataSource.sort=this.sort;
+  }
+
+  getOffers(){
+    this.offerService.getOffers().subscribe(
+      {
+        next: (result:any)=>{
+          this.dataSource.data=result;  
+        },
+        error: (error:any)=>{
+          console.log(error);
+        }
+      }
+    );
+  }
+
+  addOffer(){
+    this.router.navigateByUrl('/admins/offers/new');
+    // this.offerService.addOffer(this.offer).subscribe(
+    //   {
+    //     next: (result:any)=>{
+    //       this.getOffers();
+    //     },
+    //     error: (error:any)=>{
+    //       console.log(error);
+    //     }
+    //   }
+    // );
+  }
+
+  updateOffer(index:any){
+    this.router.navigateByUrl('admin/offers/edit/'+index);
+    // this.offerService.updateOffer(this.dataSource.data[index]).subscribe(
+    //   {
+    //     next: (result:any)=>{
+    //       this.getOffers();
+    //     },
+    //     error: (error:any)=>{
+    //       console.log(error);
+    //     }
+    //   }
+    // );
+  }
+
+  deleteOffer(index:any){
+    this.offerService.deleteOffer(index).subscribe(
+      {
+        next: (result:any)=>{
+          this.getOffers();
+        },
+        error: (error:any)=>{
+          console.log(error);
+        }
+      }
+    );
+  }
 }
