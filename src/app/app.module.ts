@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {SharedModule} from './shared/shared.module';
+import { SharedModule } from 'src/public/shared/shared.module';
 
 @NgModule({
   declarations: [
