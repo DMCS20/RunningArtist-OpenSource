@@ -26,6 +26,11 @@ export class OfferService {
       .post<Offer>(environment.baseUrl + '/offers', offer)
   }
 
+  addOfferWithId(offer: Offer): Observable<Offer> {
+    return this.http
+      .post<Offer>(environment.baseUrl + '/offers/'+offer.id, offer)
+  }
+
   updateOffer(offer: Offer): Observable<Offer> {
     return this.http
       .put<Offer>(environment.baseUrl + '/offers/' + offer.id, offer)

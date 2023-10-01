@@ -21,19 +21,14 @@ export class ListOffersComponent {
   @ViewChild(MatSort)
   sort!: MatSort;
 
-  offer:Offer={
-    id:0,
-    title:'',
-    description:'',
-    points:0,
-    businessId:0
-  };
-
   constructor(private offerService:OfferService, private router:Router) {}
 
   ngOnInit():void{
     this.getOffers();
     this.dataSource.paginator=this.paginator;
+  }
+
+  ngAfterViewInit():void{
     this.dataSource.sort=this.sort;
   }
 
@@ -52,16 +47,6 @@ export class ListOffersComponent {
 
   addOffer(){
     this.router.navigateByUrl('/admins/offers/new');
-    // this.offerService.addOffer(this.offer).subscribe(
-    //   {
-    //     next: (result:any)=>{
-    //       this.getOffers();
-    //     },
-    //     error: (error:any)=>{
-    //       console.log(error);
-    //     }
-    //   }
-    // );
   }
 
   updateOffer(index:any){

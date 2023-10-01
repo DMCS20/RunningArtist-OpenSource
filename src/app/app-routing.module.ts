@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListOffersComponent } from './components/list-offers/list-offers.component';
 import { HomeComponent } from './components/home/home.component';
+import { NewOfferComponent } from './components/new-offer/new-offer.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'business/offers', component: ListOffersComponent},
-  {path: '', redirectTo: '/business/offers', pathMatch: 'full'},
-  {path: '**', redirectTo: '/business/offers', pathMatch: 'full'}
+  {path:'admins/offers/new', component: NewOfferComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];
 
 @NgModule({
