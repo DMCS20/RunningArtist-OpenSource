@@ -49,9 +49,9 @@ export class ListOffersComponent {
     this.router.navigateByUrl('/admins/offers/new');
   }
 
-  updateOffer(index:any){
-    this.router.navigateByUrl('admin/offers/edit/'+index);
-    // this.offerService.updateOffer(this.dataSource.data[index]).subscribe(
+  updateOffer(id:any){
+    this.router.navigateByUrl('admins/offers/edit/'+id);
+    // this.offerService.updateOffer(id).subscribe(
     //   {
     //     next: (result:any)=>{
     //       this.getOffers();
@@ -63,8 +63,8 @@ export class ListOffersComponent {
     // );
   }
 
-  deleteOffer(index:any){
-    this.offerService.deleteOffer(index).subscribe(
+  deleteOffer(id:any){
+    this.offerService.deleteOffer(id).subscribe(
       {
         next: (result:any)=>{
           this.getOffers();
