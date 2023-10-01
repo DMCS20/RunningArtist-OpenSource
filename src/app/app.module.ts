@@ -12,6 +12,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HomeComponent } from './components/home/home.component';
 import { NewOfferComponent } from './components/new-offer/new-offer.component';
+import { EditOfferComponent } from './components/edit-offer/edit-offer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NewOfferComponent } from './components/new-offer/new-offer.component';
     ToolbarComponent,
     HomeComponent,
     ListOffersComponent,
-    NewOfferComponent
+    NewOfferComponent,
+    EditOfferComponent
   ],
   imports: [
     BrowserModule,

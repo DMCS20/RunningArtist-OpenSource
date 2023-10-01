@@ -1,0 +1,36 @@
+.edit-offer-form{
+    text-align: center;
+    box-sizing: border-box;
+    input[matinput]::-webkit-outer-spin-button,
+    input[matinput]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    input[matinput][type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    }  
+}
+
+
+.title-field{
+    width: 17rem;
+}
+
+.points-field{
+    width: 17rem;
+}
+
+.bussiness-field{
+    width: 17rem;
+}
+
+.description-field{
+    width: 17rem;
+}
+
+.cancel-button{
+    margin-left: 1rem;
+}
+  
