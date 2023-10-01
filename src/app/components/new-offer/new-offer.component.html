@@ -1,0 +1,50 @@
+<div class="add-offer-form">
+    <br>
+    <mat-form-field class="id-field" appearance="outline">
+        <mat-label>Id</mat-label>
+        <input matInput type="number" min="1" [(ngModel)]="offer.id" (ngModelChange)="onIdChange()">
+        <button *ngIf="offer.id" matSuffix mat-icon-button aria-label="Clear" (click)="offer.id=''">
+          <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <button class="verify-button" mat-raised-button color="primary" (click)="checkIdAvailability()">Verify ID</button>
+    <br>
+
+    <mat-form-field class="title-field" appearance="outline">
+      <mat-label>Title</mat-label>
+      <input matInput type="text" minlength="1" maxlength="60" required="true" [(ngModel)]="offer.title">
+      <button *ngIf="offer.title" matSuffix mat-icon-button aria-label="Clear" (click)="offer.title=''">
+        <mat-icon>close</mat-icon>
+      </button>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="points-field" appearance="outline">
+    <mat-label>Points</mat-label>
+    <input matInput type="number" min="1" max="100" required="true" [(ngModel)]="offer.points">
+    <button *ngIf="offer.points" matSuffix mat-icon-button aria-label="Clear" (click)="offer.points=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="bussiness-field" appearance="outline">
+    <mat-label>Business ID</mat-label>
+    <input matInput type="number" min="1" [(ngModel)]="offer.businessId">
+    <button *ngIf="offer.businessId" matSuffix mat-icon-button aria-label="Clear" (click)="offer.businessId=''">
+      <mat-icon>close</mat-icon>
+    </button>
+</mat-form-field>
+<br>
+
+<mat-form-field class="description-field" appearance="outline">
+  <mat-label>Description</mat-label>
+  <textarea cdkTextareaAutosize cdkAutosizeMinRows="5" cdkAutosizeMaxRows="10" [(ngModel)]="offer.description" matInput placeholder="Ex. Get 30% off..."></textarea>
+</mat-form-field>
+<br>
+
+<button class="save-button" mat-raised-button color="primary" (click)="saveChanges()">Save</button>
+<button class="cancel-button" mat-raised-button color="primary" (click)="cancelChanges()">Cancel</button>
+
+</div>

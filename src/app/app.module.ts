@@ -11,13 +11,15 @@ import { ListOffersComponent } from './components/list-offers/list-offers.compon
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HomeComponent } from './components/home/home.component';
+import { NewOfferComponent } from './components/new-offer/new-offer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     HomeComponent,
-    ListOffersComponent
+    ListOffersComponent,
+    NewOfferComponent
   ],
   imports: [
     BrowserModule,

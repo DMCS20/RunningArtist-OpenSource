@@ -10,7 +10,10 @@ import { MatInputModule} from '@angular/material/input';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule } from '@angular/forms';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
     declarations: [],
@@ -25,7 +28,11 @@ import { FormsModule } from '@angular/forms';
         MatInputModule,
         MatPaginatorModule,
         MatTableModule,
-        FormsModule
+        FormsModule,
+        MatFormFieldModule,
+        ReactiveFormsModule,
+        MatSnackBarModule,
+        MatSortModule
     ],
     exports: [
         CommonModule,
@@ -38,7 +45,11 @@ import { FormsModule } from '@angular/forms';
         MatPaginatorModule,
         MatTableModule,
         FormsModule,
-        MatCardModule
+        MatCardModule,
+        MatFormFieldModule,
+        ReactiveFormsModule,
+        MatSnackBarModule,
+        MatSortModule
     ]
     })
     export class SharedModule { }
